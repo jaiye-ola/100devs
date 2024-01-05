@@ -1,0 +1,196 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+* {
+  font-family: Arial, sans-serif;;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+
+body {
+
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {
+  background: black;
+  color: #fff;
+  font-size: 1.3rem;
+  height: 55px;
+}
+
+nav > * {
+  display: block;
+  height: 100%;
+  float: left; 
+  margin-top: 18px;
+}
+
+nav > img {
+  margin-top: 0; 
+  height: 50px;
+  object-fit: cover;
+}
+
+nav > img,
+nav > a {
+  width: 8%;
+  margin-left: 2%;
+}
+
+nav > a {
+  margin-top: 3px;
+  padding: 10px 0;
+}
+
+.profile {
+  border: 2px solid black;
+  border-radius: 50%;
+  background: rgb(222, 212, 212);
+  color: black;
+  height: 2.2rem;
+  margin-right: 10px;
+  padding-top: 5px;
+  text-align: center;
+  width: 2.2rem;
+}
+
+nav ul {
+  list-style: none;
+  margin-top: 0;
+  width: 80%;
+}
+
+nav ul li {
+  border-left: 1px solid gray;
+  float: left;
+  margin-top: 0px;
+  padding: 16px 0;
+  text-align: center;
+  width: 8.5%;
+}
+
+nav a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.search {
+  width: 20%;
+  padding-left: 2%;
+}
+
+.searchbar {
+  background-image: url(https://uxwing.com/wp-content/themes/uxwing/download/user-interface/search-icon.png);
+  background-size: 15px 15px; 
+  background-repeat: no-repeat; 
+  background-position: 95%;
+}
+
+main {
+  border: 2px solid gold;
+  height: 50vh;
+}
+
+main > section {
+  border: 2px solid green;
+  float: left;
+  height: 85%;
+  width: 50%;
+}
+
+.welcome {
+  height: 15%;
+}
+
+.welcome * {
+  display: inline-block;
+  padding-top: 0.2%;
+}
+
+h1 {
+  margin-left: 0.5%;
+  margin-right: 72%;
+}
+
+.welcome span {
+  font-size: 2rem;
+  color: gray;
+}
+
+.main-img {
+  border: 2px solid;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.main-section {
+  color: #fff;
+}
+
+.main-section h2 {
+  font-weight: 200;
+  font-size: 3rem;
+  margin-top: 25%;
+  text-align: center;
+}
+
+main section + section section {
+  border: 2px solid blue;
+  height: 50%;
+  float: left;
+  width: 50%;
+}
+
+.second-sec {
+  border: 5px solid purple;
+  height: 50vh;
+}
+
+.second-sec section {
+  border: 2px solid black;
+  float: left;
+  height: 100%;
+  width: 33.333%;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+.searchbar::placeholder {
+  font-weight: 600; 
+}
+
+@media all and (max-width: 960px) {
+  main > section {
+    display: block;
+  }
+}
