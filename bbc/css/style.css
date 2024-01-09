@@ -25,7 +25,7 @@
 
 body {
      font-family: Arial, sans-serif;
-     padding-top: 150px;
+     padding: 150px 0 20px 0;
 }
 
 
@@ -45,6 +45,7 @@ nav {
      position: fixed;
      top: 0;
      width: 100%;
+     z-index: 1000;
 }
 
 nav * {
@@ -90,21 +91,7 @@ nav * {
      width: calc(100vw - 400px);
 }
 
-.bars {
-     display: none;
-     font-size: 3rem;
-     margin-top: 10px;
-     position: relative;
-}
 
-.bar {
-     position: absolute;
-     right: -90%;
-}
-
-.hamburger {
-     display: none;
-}
 
 .flexLink,
 .profile-btn,
@@ -154,6 +141,19 @@ li.navEnd {
      padding-left: 5px;
 }
 
+.hamburger {
+     cursor: pointer;
+     font-size: 50px;
+     max-height: 0;
+     overflow: hidden;
+     position: relative;
+     right: -40vw;
+}
+
+.hamburger-chck {
+     display: none;
+}
+
 @media screen and (max-width: 1000px) {
      .hiddenNav {
           display: none;
@@ -165,31 +165,60 @@ li.navEnd {
      }
 }
 
-@media screen and (max-width: 890px) {
-          .flexNav {
-               display: none;
-          }
+@media screen and (max-width: 950px) {
+     .firstSec .half {
+          height: 48vh;
+          margin-bottom: 5vh;
+          width: 100%;
+     }
 
-          .bars {
-               display: block;
-               width: calc(100vw - 400px);
-          }
-
-          .bars * {
-               position: absolute;
-               left: 50%;
-               top: 50%;
-          }
-
-          .hamburger {
-               max-height: 200px;
-          }
-
+     .firstSec .half:nth-child(2) {
+          height: 60vh;
+     }
 }
+
+@media screen and (max-width: 890px) {
+     .flexNav {
+          height: 0;
+          overflow: hidden;
+     }
+
+     .hamburger {
+          max-height: unset;
+     }
+     
+
+     .hamburger-chck:checked + .flexNav {
+          background: #000;
+          height: 30vh;
+          overflow-y: scroll;
+          position: absolute;
+          top: 8.3vh;
+          width: 100vw;
+          z-index: 2;
+     }
+
+     .hamburger-chck:checked ~ .firstSec {
+          display: none;
+     }
+
+     .flexNav li {
+          display: block;
+          width: 100%;
+     }
+}
+
+@media screen and (max-width: 630px) {
+     .half:first-child {
+          height: 65vh;
+     }
+}
+
 
 /* FIRST-SECTION */
      .firstSec {
           height: 40vh;
+          margin-bottom: 10vh;
      }
 
      .half,
@@ -287,6 +316,48 @@ li.navEnd {
           font-weight: 100;
           margin-bottom: 2%;
      }
+
+     /* SECOND SECTION */
+     .secSec {
+          height: 55vh    
+     }
+
+     .latest {
+          float: left;
+          margin-left: 3%;
+          width: 29%;
+     }
+
+     .latest img {
+          float: none;
+          margin-bottom: 0.9rem;
+          width: 100%;
+     }
+
+     .latest-heading {
+          font-size: 1.75rem;
+          font-weight: 700;
+          line-height: 2.8rem;
+          margin-bottom: 0.9rem;
+     }
+
+     .latest-txt {
+          font-size: 1.4rem;
+          line-height: 2.1rem;
+          margin-bottom: 0.5rem;
+     }
+
+     @media screen and (min-width: 1514px) {
+          
+          .pd-top {
+               margin-top: 35px;
+          }
+     }
+
+     .latest .main-span {
+          color: rgba(0, 0, 0, 0.5)
+     }
+
 footer {
      
 }
