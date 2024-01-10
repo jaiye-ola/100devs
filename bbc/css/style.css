@@ -53,7 +53,6 @@ nav * {
 }
 
 .fixedNav {
-     /* border: 2px solid; */
      height: 90%;
      position: relative;
      width: 250px;
@@ -189,13 +188,27 @@ li.navEnd {
      
 
      .hamburger-chck:checked + .flexNav {
-          background: #000;
+          /* border: 2px solid; */
+          background: #222;
           height: 30vh;
           overflow-y: scroll;
           position: absolute;
-          top: 8.3vh;
+          top: 8vh;
+          transition: all 0.2s linear;
           width: 100vw;
           z-index: 2;
+     }
+
+     .flexNav .hiddenNav2 {
+          display: none;
+     }
+
+     .flexLink {
+          border-left: 0;
+     }
+
+     .flexLink:hover {
+          background: #000;
      }
 
      .hamburger-chck:checked ~ .firstSec {
@@ -231,7 +244,6 @@ li.navEnd {
      }
 
      .half {
-          border: 2px solid;
           float: left;
           height: 100%;
           position: relative;
@@ -244,7 +256,6 @@ li.navEnd {
      }
 
      .sideNews {
-          border: 2px solid;
           float: left;
           height: 48%;
           margin-bottom: 1.5%;
