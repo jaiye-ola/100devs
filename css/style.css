@@ -1,0 +1,119 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {
+  border: 2px solid;
+}
+
+nav {
+  border: 2px solid green;
+}
+
+nav * {
+  float: left;
+  font-family: Arial;
+  font-size: 1.3rem;
+  font-weight: 800  ;
+  color: rgb(49, 147, 201);
+}
+
+.navStart,
+.navEnd {
+  border: 2px solid red;
+  width: 30%;
+}
+
+.navStart * {
+  margin-right: 2vw;
+}
+
+.pageNav {
+  margin-left: 7vw;
+}
+
+.searchNav {
+  border: 2px solid;
+  margin-top: -7px;
+  padding: 5px 0 20px 0;
+  /* position: relative; */
+}
+
+.searchBar {
+  background: rgba(211, 211, 211, 0.5);
+  border: 0;
+  /* padding: 3px 0; */
+  padding: 6px 0;
+}
+
+
+.icon {
+  font-weight: 800;
+  left: 80%;
+  position: relative;
+  top: 8px;
+}
+
+
+
+.logoLink {
+  border: 2px solid;
+  width: 30%;
+  z-index: 5;
+}
+
+.logo {
+  left: 7vw;
+  position: relative;
+  top: -13px;
+  width: 200px;
+}
+
+.navStart {
+  width: 40%;
+  padding: 2vh 0;
+}
+
+.logoLink  {
+  padding: 2.3vh 0;
+}
+
+.extraLinks {
+  /* float: left; */
+  margin-right: 5vw;
+}
+
+footer {
+
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
