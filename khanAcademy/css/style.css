@@ -1,0 +1,224 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* NAVIGATION */
+
+header {
+  border: 2px solid;
+}
+
+.navBar {
+  /* border: 2px solid green; */
+  position: relative;
+}
+
+.navBar * {
+  float: left;
+  font-family: Arial;
+  font-size: 1.3rem;
+  font-weight: 800  ;
+  color: rgb(49, 147, 201);
+}
+
+.navStart,
+.navEnd {
+  /* border: 2px solid red; */
+  width: 30%;
+}
+
+.navStart {
+  margin-top: 10px;
+}
+.navStart * {
+  margin-right: 2vw;
+}
+
+.pageNav {
+  border: 0;
+  margin-left: 7vw;
+}
+
+.searchNav {
+  /* border: 2px solid; */
+  margin-top: -7px;
+  padding: 5px 0 20px 0;
+}
+
+.searchBar {
+  background: rgba(211, 211, 211, 0.5);
+  border: 0;
+  padding: 6px 0;
+}
+
+
+.firstSearch {
+  font-weight: 800;
+  left: 80%;
+  position: relative;
+  top: 8px;
+}
+
+
+
+.logoLink {
+  /* border: 2px solid; */
+  width: 30%;
+  z-index: 5;
+}
+
+.logo {
+  left: 7vw;
+  position: relative;
+  top: -13px;
+  width: 200px;
+}
+
+.navStart {
+  width: 40%;
+  padding: 2vh 0;
+}
+
+.logoLink  {
+  padding: 2.3vh 0;
+}
+
+.navEnd {
+  /* border: 2px solid; */
+  margin-top: 15px;
+}
+
+.extraLinks {
+  margin-right: 5vw;
+  text-decoration: none;
+}
+
+
+.dropdown {
+  display: none;
+}
+
+.innerDropDown {
+  /* border: 2px solid; */
+  display: none;
+}
+
+@media screen and (max-width: 1250px) {
+  .navStart,
+  .navEnd {
+    display: none;
+  }
+
+  .dropdown {
+    /* border: 2px solid; */
+    display: unset;
+    position: absolute;
+    top: 15%;
+    right: 3%;
+  }
+
+  .menu {
+    display: none;
+  }
+
+
+  .menu:checked ~ .innerDropDown {
+    display: block;
+    left: -93.9vw;
+    height: 120px;
+    position: absolute;
+    top: 150%;
+    width: 100vw;
+  }
+
+  .menuLabel {
+    cursor: pointer;
+    font-size: 3.5rem;
+    line-height: 5.5rem;
+  }
+
+  .linksContainer {
+    /* border: 2px solid green; */
+    list-style: none;
+    margin-top: 0;
+  }
+
+  .extraLinks {
+    border: 2px solid;
+    height: 40px;
+    line-height: 30px;
+    margin-left: -3.8vw;
+    padding-bottom: 10px;
+    text-align: center;
+    width: 100vw;
+  }
+  
+  .extraLinks:hover {
+    background-color: grey;
+  }
+}
+
+/* FIRST-SECTION */
+.firstSection {
+  border: 2px solid;
+}
+
+.imgSection,
+.introSection {
+  border: 2px solid green;
+  float: left;
+  width: 50%;
+}
+
+.imgSection {
+  border: 2px solid purple;
+  position: relative;
+}
+
+.introSection {
+  height: 581.9px;
+  
+}
+
+.introImg {
+  /* border: 2px solid; */
+  position: absolute;
+  right: 0;
+  transform: scale(0.9);
+}
+
+footer {
+
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
