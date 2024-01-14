@@ -1,0 +1,323 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* NAVIGATION */
+
+header {
+  border: 2px solid;
+}
+
+.navBar {
+  /* border: 2px solid green; */
+  position: relative;
+  z-index: 1099;
+}
+
+.navBar * {
+  float: left;
+  font-family: Arial;
+  font-size: 1.3rem;
+  font-weight: 800  ;
+  color: rgb(49, 147, 201);
+}
+
+.navStart,
+.navEnd {
+  /* border: 2px solid red; */
+  width: 30%;
+}
+
+.navStart {
+  margin-top: 10px;
+}
+.navStart * {
+  margin-right: 2vw;
+}
+
+.pageNav {
+  border: 0;
+  margin-left: 7vw;
+}
+
+.searchNav {
+  /* border: 2px solid; */
+  margin-top: -7px;
+  padding: 5px 0 20px 0;
+}
+
+.searchBar {
+  background: rgba(211, 211, 211, 0.5);
+  border: 0;
+  padding: 6px 0;
+}
+
+
+.firstSearch {
+  font-weight: 800;
+  left: 80%;
+  position: relative;
+  top: 8px;
+}
+
+
+
+.logoLink {
+  /* border: 2px solid; */
+  width: 30%;
+  z-index: 5;
+}
+
+.logo {
+  left: 7vw;
+  position: relative;
+  top: -13px;
+  width: 200px;
+}
+
+.navStart {
+  width: 40%;
+  padding: 2vh 0;
+}
+
+.logoLink  {
+  padding: 2.3vh 0;
+}
+
+.navEnd {
+  /* border: 2px solid; */
+  margin-top: 15px;
+}
+
+.extraLinks {
+  margin-right: 5vw;
+  text-decoration: none;
+}
+
+
+.dropdown {
+  display: none;
+}
+
+.innerDropDown {
+  /* border: 2px solid; */
+  display: none;
+}
+
+@media screen and (max-width: 1250px) {
+  .navStart,
+  .navEnd {
+    display: none;
+  }
+
+  .dropdown {
+    /* border: 2px solid; */
+    display: unset;
+    position: absolute;
+    top: 15%;
+    right: 3%;
+  }
+
+  .menu {
+    display: none;
+  }
+
+
+  .menu:checked ~ .innerDropDown {
+    background-color: darkgreen;
+    display: block;
+    left: -93.9vw;
+    height: 120px;
+    position: absolute;
+    top: 150%;
+    width: 100vw;
+  }
+
+  @media screen and (max-width: 990px) {
+    .menu:checked ~ .innerDropDown {
+      left: -92vw;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .menu:checked ~ .innerDropDown {
+      left: -91vw;
+    }
+  }
+
+  .menuLabel {
+    cursor: pointer;
+    font-size: 3.5rem;
+    line-height: 5.5rem;
+  }
+
+  .linksContainer {
+    /* border: 2px solid green; */
+    list-style: none;
+    margin-top: 0;
+  }
+
+  .extraLinks {
+    /* border: 2px solid; */
+    height: 40px;
+    line-height: 30px;
+    margin-left: -3.8vw;
+    padding-bottom: 10px;
+    text-align: center;
+    width: 100vw;
+  }
+  
+  .extraLinks:hover {
+    background-color: grey;
+  }
+}
+
+/* FIRST-SECTION */
+.firstSec {
+  /* border: 5px solid; */
+  height: 80vh;
+}
+
+.imgSection,
+.introSection {
+  /* border: 2px solid green; */
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+
+.imgSection {
+  /* border: 2px solid purple; */
+  position: relative;
+}
+
+.introSection {
+  /* height: 581.9px; */
+  z-index: 5;
+  
+}
+
+.introImg {
+  /* max-height: 560px; */
+  max-width: 600px;
+  position: absolute;
+  right: 0;
+  transform: scale(0.9);
+  z-index: -1;
+}
+
+.main-txt {
+  font-family: "IBM Plex Serif", serif;
+  font-size: 3.6rem;
+  font-weight: 600;
+  line-height: 4.5rem;
+  margin-bottom: 0;
+  margin-top: 15%;
+  max-width: 350px;
+}
+
+.main-border {
+  margin-top: -5px;
+  max-width: 297px;
+}
+
+.main-paragraph {
+  color: rgba(0, 0, 0, 0.8);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  margin-bottom: 30px;
+  width: 450px;
+}
+
+.introLinks {
+  background-color: rgba(0, 89, 255, 0.8);
+  border: 2px solid;
+  border-radius: 5px;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  padding: 7px 14px;
+}
+
+@media screen and (max-width: 1010px) {
+  .firstSec * {
+    width: 100%;
+  }
+
+  .introImg {
+    display: block;
+    margin: 0 auto;
+    max-width: 560px;
+    position: relative;
+    top: -5%;
+  }
+
+  .introSection {
+    /* border: 2px solid green; */
+    margin-top: -15%;
+  }
+
+  .main-txt {
+    /* border: 2px solid; */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .main-border {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .main-paragraph {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .linkContainer {
+    /* border: 5PX solid gold; */
+    margin: 0 auto;
+    max-width: 600px;
+    padding-left: 15%;
+  }
+}
+
+footer {
+
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
